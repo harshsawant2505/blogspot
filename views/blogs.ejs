@@ -1,0 +1,29 @@
+<%- include ("partials/header.ejs") %>
+<body>
+    <h1 class="your-blogs">your blogs</h1>
+    <main class="blogs">
+       
+        <% if(locals.status){ %>
+            
+         <% for(i =0; i<blogtitle.length; i++){ %>
+            <div class="blogsEach">
+                
+                <h2 class="title"><%= blogtitle[i] %></h2>
+                <p class="blogPara"><%= blogContents[i] %></p> <br>
+                
+            
+             </div>
+       <% } %>
+       <% }else{ %>
+        <div class="blogsEach">
+       <h2 class="title"><%= blogtitle[index] %></h2>
+       <p class="blogPara"><%= blogContents[index] %></p> <br>
+    </div>
+        <% } %>
+
+
+    </main>
+    
+    
+</body>
+<%- include ("partials/footer.ejs") %>

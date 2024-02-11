@@ -1,0 +1,32 @@
+
+<% if(locals.found) {%>
+
+<%- include ("partials/header.ejs",{found: found}) %>
+<% }else{ %>
+    <%- include ("partials/header.ejs") %>
+
+<% } %>
+<body>
+
+    <main class="postBlogs">
+        <h1 class="title">post your blogs here</h1>
+        <form action="submit" method="POST">
+            <label for="title">enter title:</label>
+            <input type="text" name="title"><br>
+            <label for="blog-cont">blog content: </label><br>
+            <textarea id="textBox" name="blog" rows="4" cols="50"></textarea><br>
+            <input class="submit"  type="submit" value="submit" >
+        </form>
+        <% if(locals.status){ %>
+           <p><%= status %></p>
+           <% } %>
+    </main>
+    
+    <script >
+
+        document.querySelector(".delete").addEventListener("click",function(){
+            console.log("hello")
+        })
+    </script>
+</body>
+<%- include ("partials/footer.ejs") %>

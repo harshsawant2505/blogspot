@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<header>
+    <nav>
+        <a href="/">blogspot</a>
+    
+        <ul>
+            <li><a href="/">home</a></li>
+            <li><a href="/allBlogs">Blogs</a></li>
+            <form action="search" method="POST">
+                <input type="text" name="blog">
+                <input type="submit" value="search" >
+                
+            </form>
+            <% if(locals.found){ %>
+                <p>not found!</p>
+                <% } %>
+          
+        </ul>
+    </nav>
+</header>
